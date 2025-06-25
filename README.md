@@ -31,6 +31,7 @@ Shoppify/
 ### 📦 Prerequisites
 
 - Node.js & npm installed
+- 
 - MongoDB running locally or MongoDB Atlas URI
 
 ---
@@ -38,6 +39,7 @@ Shoppify/
 ### 🔧 Clone the Repository
 
 git clone https://github.com/riyatyag/Shoppify.git
+
 cd Shoppify
 
 🧩 Install Dependencies
@@ -101,7 +103,7 @@ nodemon index.js
 
 Runs on http://localhost:4001
 
-🔐 Features
+# 🔐 Features
 🛒 Product listing with filters
 
 🧾 Cart and checkout functionality
