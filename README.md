@@ -39,17 +39,25 @@ Shoppify/
 
 git clone https://github.com/riyatyag/Shoppify.git
 cd Shoppify
+
 🧩 Install Dependencies
-For Frontend
+
+# For Frontend
 cd client
 npm install
-For Admin Panel
+
+
+# For Admin Panel
 cd admin
 npm install
-For Backend
+
+
+# For Backend
 cd server
 npm install
-⚙️ Environment Setup
+
+
+# ⚙️ Environment Setup
 Create a .env file inside the server folder and add the following:
 
 env
@@ -58,9 +66,7 @@ MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret_key
 🏁 Running the Project
 ➤ Start Frontend (React)
-bash
-Copy
-Edit
+
 cd client
 npm start
 Runs on http://localhost:3000
