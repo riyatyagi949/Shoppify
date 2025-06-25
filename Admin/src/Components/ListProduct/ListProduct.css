@@ -1,0 +1,115 @@
+.list-product {
+  width: 100%;
+  padding: 30px 5%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+.list-product h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.listproduct-format-main {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1.5fr 0.5fr;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 16px;
+  background-color: #e4e4e4;
+  border-radius: 8px;
+  color: #444;
+}
+
+.listproduct-allproducts {
+  margin-top: 10px;
+}
+
+.listproduct-format {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  margin-top: 10px;
+  padding: 12px 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1fr 1fr 1.5fr 0.5fr;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.listproduct-format:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: #fcfcfc;
+}
+
+.listproduct-product-icon {
+  height: 50px;
+  width: 50px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f3f3f3;
+  padding: 4px;
+}
+
+.listproduct-remove-icon {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.listproduct-remove-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+@media (max-width: 1024px) {
+  .listproduct-format-main,
+  .listproduct-format {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+  }
+
+  .listproduct-remove-icon {
+    height: 20px;
+    width: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .list-product h1 {
+    font-size: 22px;
+  }
+
+  .listproduct-format-main,
+  .listproduct-format {
+    grid-template-columns: 1fr 1fr;
+    font-size: 14px;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .listproduct-product-icon {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-product {
+    padding: 20px 10px;
+  }
+
+  .listproduct-format-main,
+  .listproduct-format {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .listproduct-format {
+    padding: 10px 12px;
+  }
+}

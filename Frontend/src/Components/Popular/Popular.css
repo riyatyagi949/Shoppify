@@ -1,0 +1,68 @@
+.popular {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popular h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.popular hr {
+  border: none;
+  height: 2px;
+  background: #eee;
+  margin-bottom: 30px;
+}
+
+/* Responsive Grid Layout */
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+/* Loading & Error States */
+.popular-loading,
+.popular-error {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  padding: 40px 0;
+}
+
+
+
+/* Updated to grid for exactly 4 products per row */
+.popular-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
+/* Responsive for tablets and smaller screens */
+@media (max-width: 900px) {
+  .popular h1 {
+    font-size: 36px;
+  }
+  .popular-item {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+    gap: 20px;
+  }
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .popular h1 {
+    font-size: 28px;
+  }
+  .popular-item {
+    grid-template-columns: 1fr; /* 1 per row on mobiles */
+    gap: 15px;
+  }
+}
