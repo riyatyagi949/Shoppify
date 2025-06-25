@@ -17,11 +17,17 @@ Shoppify is a modern and responsive full-stack e-commerce application built usin
 ## 📁 Folder Structure
 
 Shoppify/
+
 ├── client/ # React frontend
+
 ├── admin/ # Admin panel
+
 ├── server/ # Backend - Node.js + Express
+
 ├── .gitignore
+
 ├── README.md
+
 └── package.json
 
 ---
