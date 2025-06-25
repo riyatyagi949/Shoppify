@@ -43,48 +43,62 @@ cd Shoppify
 🧩 Install Dependencies
 
 # For Frontend
+
 cd client
+
 npm install
 
 
 # For Admin Panel
+
 cd admin
+
 npm install
 
 
 # For Backend
+
 cd server
+
 npm install
 
 
 # ⚙️ Environment Setup
+
 Create a .env file inside the server folder and add the following:
 
 env
+
 PORT=4001
+
 MONGO_URI=your_mongo_connection_string
+
 JWT_SECRET=your_jwt_secret_key
+
 🏁 Running the Project
-➤ Start Frontend (React)
+
+# ➤ Start Frontend (React)
 
 cd client
+
 npm start
+
 Runs on http://localhost:3000
 
-➤ Start Admin Panel
-bash
-Copy
-Edit
+# ➤ Start Admin Panel
+
 cd admin
+
 npm run dev
+
 Runs on http://localhost:5173 or your configured Vite port
 
-➤ Start Backend (Express)
-bash
-Copy
-Edit
+# ➤ Start Backend (Express)
+
 cd server
+
 nodemon index.js
+
 Runs on http://localhost:4001
 
 🔐 Features
