@@ -31,7 +31,7 @@ Shoppify/
 ### 📦 Prerequisites
 
 - Node.js & npm installed
-- 
+
 - MongoDB running locally or MongoDB Atlas URI
 
 ---
