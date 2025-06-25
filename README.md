@@ -37,34 +37,22 @@ Shoppify/
 
 ### 🔧 Clone the Repository
 
-```bash
 git clone https://github.com/riyatyag/Shoppify.git
 cd Shoppify
 🧩 Install Dependencies
 For Frontend
-bash
-Copy
-Edit
 cd client
 npm install
 For Admin Panel
-bash
-Copy
-Edit
 cd admin
 npm install
 For Backend
-bash
-Copy
-Edit
 cd server
 npm install
 ⚙️ Environment Setup
 Create a .env file inside the server folder and add the following:
 
 env
-Copy
-Edit
 PORT=4001
 MONGO_URI=your_mongo_connection_string
 JWT_SECRET=your_jwt_secret_key
