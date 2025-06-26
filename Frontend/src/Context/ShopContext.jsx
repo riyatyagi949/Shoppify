@@ -12,7 +12,8 @@ const ShopContextProvider = ({ children }) => {
 
   // Fetch all products
   useEffect(() => {
-    axios.get("http://localhost:4001/allproducts")
+    axios.get("https://shoppify-backend-gofd.onrender.com/allproducts")
+
       .then(res => setProducts(res.data))
       .catch(console.error);
   }, []);
@@ -21,7 +22,8 @@ const ShopContextProvider = ({ children }) => {
   useEffect(() => {
     if (token) {
       setIsLoggedIn(true);
-      axios.post("http://localhost:4001/getcart", {}, {
+      axios.post("https://shoppify-backend-gofd.onrender.com/getcart"
+, {}, {
         headers: { "auth-token": token },
       })
       .then(res => setCartItems(res.data || {}))
@@ -33,7 +35,8 @@ const ShopContextProvider = ({ children }) => {
     if (!token) return alert("Please log in to add items to cart.");
 
     try {
-      const res = await axios.post("http://localhost:4001/addtocart", { itemId }, {
+      const res = await axios.post("https://shoppify-backend-gofd.onrender.com/addtocart"
+, { itemId }, {
         headers: { "auth-token": token },
       });
       setCartItems(res.data.cartData);
@@ -46,7 +49,8 @@ const ShopContextProvider = ({ children }) => {
     if (!token) return alert("Please log in to remove items from cart.");
 
     try {
-      const res = await axios.post("http://localhost:4001/removefromcart", { itemId }, {
+      const res = await axios.post("https://shoppify-backend-gofd.onrender.com/removefromcart"
+, { itemId }, {
         headers: { "auth-token": token },
       });
       setCartItems(res.data.cartData);

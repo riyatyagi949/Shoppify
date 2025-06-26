@@ -20,10 +20,10 @@ const NewsLetter = () => {
     try {
       const token = localStorage.getItem("auth-token");
       const res = await axios.post(
-        "http://localhost:4001/newsletter",
-        { email },
-        { headers: { "auth-token": token } }
-      );
+  "https://shoppify-backend-gofd.onrender.com/newsletter",
+  { email },
+  { headers: { "auth-token": token } }
+);
       setMessage(res.data.success ? "✅ Subscribed!" : res.data.message);
     } catch (err) {
       setMessage(

@@ -11,7 +11,8 @@ const RelatedProducts = () => {
   useEffect(() => {
     const fetchRelatedProducts = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/popularinwomen");
+        const response = await axios.get("https://shoppify-backend-gofd.onrender.com/popularinwomen");
+
         setRelatedProducts(response.data);
       } catch (err) {
         console.error("Error fetching related products:", err);

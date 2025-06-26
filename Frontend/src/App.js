@@ -14,7 +14,7 @@ import kid_banner from './Components/Assets/banner_kids.png';
 
 import ShopContextProvider from './Context/ShopContext';
 
-// ✅ Protect route if not logged in
+//  Protect route if not logged in
 const PrivateRoute = ({ children }) => {
   const isLoggedIn = !!localStorage.getItem('auth-token');
   return isLoggedIn ? children : <Navigate to="/login" />;

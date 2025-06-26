@@ -30,8 +30,9 @@ const LoginSignUp = () => {
 
     try {
       const url = isLogin
-        ? 'http://localhost:4001/login'
-        : 'http://localhost:4001/signup';
+  ? 'https://shoppify-backend-gofd.onrender.com/login'
+  : 'https://shoppify-backend-gofd.onrender.com/signup';
+
 
       const body = isLogin
         ? { email, password }
@@ -51,7 +52,7 @@ const LoginSignUp = () => {
           setSuccess('Login successful!');
           localStorage.setItem('auth-token', data.token); // ✅ Fixed key
 
-          // ✅ Bonus: Redirect to home page after login
+          //  Bonus: Redirect to home page after login
           setTimeout(() => {
             window.location.href = '/';
           }, 1000);

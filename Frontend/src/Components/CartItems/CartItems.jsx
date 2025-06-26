@@ -38,9 +38,9 @@ const CartItems = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:4001/validate-promo", {
-        promoCode: promoCode.trim(),
-      });
+      const res = await axios.post("https://shoppify-backend-gofd.onrender.com/validate-promo", {
+  promoCode: promoCode.trim(),
+});
 
       if (res.data.success) {
         setDiscountPercent(res.data.discount);

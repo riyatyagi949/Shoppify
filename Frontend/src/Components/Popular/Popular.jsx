@@ -11,7 +11,8 @@ const Popular = () => {
   useEffect(() => {
     const fetchPopular = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/popularinwomen");
+        const res = await axios.get("https://shoppify-backend-gofd.onrender.com/popularinwomen");
+
         setProducts(res.data);
       } catch (err) {
         console.error("Error fetching popular items:", err);

@@ -11,7 +11,8 @@ const NewCollections = () => {
   useEffect(() => {
     const fetchCollections = async () => {
       try {
-        const res = await axios.get("http://localhost:4001/newcollection");
+        const res = await axios.get("https://shoppify-backend-gofd.onrender.com/newcollection");
+
         setCollections(res.data);
       } catch (err) {
         console.error("Error fetching new collections:", err);

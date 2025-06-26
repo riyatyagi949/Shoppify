@@ -13,7 +13,7 @@ const ShopCategory = (props) => {
     const fetchCategoryProducts = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:4001/allproducts");
+        const res = await axios.get("https://shoppify-backend-gofd.onrender.com/allproducts");
         const products = res.data.filter(
           (item) => item.category.toLowerCase() === props.category.toLowerCase()
         );
