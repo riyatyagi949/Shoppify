@@ -1,6 +1,8 @@
 require("dotenv").config();
+console.log("Mongo URI:", process.env.BACK_URL);
 
-const port = 4001;
+const port = process.env.PORT || 4001;
+
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -42,7 +44,8 @@ app.use('/images', express.static('upload/images'));
 app.post("/upload", upload.single('product'), (req, res) => {
   res.json({
     success: 1,
-    imageUrl: `http://localhost:${port}/images/${req.file.filename}`
+    imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
+
   });
 });
 
