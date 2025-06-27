@@ -41,13 +41,16 @@ const upload = multer({ storage: storage });
 app.use('/images', express.static('upload/images'));
 
 // Upload route
+require("dotenv").config();
+const BACKEND_URL = process.env.BACKEND_URL;
+
 app.post("/upload", upload.single('product'), (req, res) => {
   res.json({
     success: 1,
-    imageUrl: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
-
+    imageUrl: `${BACKEND_URL}/images/${req.file.filename}`
   });
 });
+
 
 // Product Schema
 const Product = mongoose.model("Product", {
