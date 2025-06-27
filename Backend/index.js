@@ -41,15 +41,20 @@ const upload = multer({ storage: storage });
 app.use('/images', express.static('upload/images'));
 
 // Upload route
-require("dotenv").config();
-const BACKEND_URL = process.env.BACKEND_URL;
-
 app.post("/upload", upload.single('product'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).json({ success: 0, message: "No file uploaded" });
+  }
+
+  const imageUrl = `https://shoppify-backend-gofd.onrender.com/images/${req.file.filename}`;
+
   res.json({
     success: 1,
-    imageUrl: `${BACKEND_URL}/images/${req.file.filename}`
+    imageUrl: imageUrl
   });
 });
+
+
 
 
 // Product Schema
