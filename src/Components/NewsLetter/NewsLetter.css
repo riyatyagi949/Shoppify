@@ -1,0 +1,204 @@
+/* ===== Global Box Sizing ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ===== Newsletter Wrapper ===== */
+.newsletter {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 120px;
+  padding: 80px 15px; 
+  background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(255, 65, 65, 0.15);
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden; 
+  transition: box-shadow 0.3s ease;
+}
+
+/* ===== Headings ===== */
+.newsletter h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #2d2d2d;
+  text-align: center;
+  margin: 0;
+  animation: slideDownFadeIn 0.8s ease forwards;
+}
+
+.newsletter p {
+  font-size: 18px;
+  color: #555;
+  margin: 0;
+  text-align: center;
+  animation: slideDownFadeIn 1s ease forwards;
+}
+
+/* ===== Input Box Container ===== */
+.newsletter div {
+  width: 100%;
+  max-width: 700px;
+  height: 70px;
+  display: flex;
+  background: #fff;
+  border: 2px solid #ff4141;
+  border-radius: 80px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 65, 65, 0.15);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  animation: fadeIn 1.2s ease forwards;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* ===== Email Input ===== */
+.newsletter input {
+  flex: 1;
+  padding: 0 24px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.newsletter input:focus {
+  background: #fef3f3;
+}
+
+/* ===== Subscribe Button ===== */
+.newsletter div button {
+  width: 200px;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.newsletter div button:hover {
+  background: #ff4141;
+  transform: scale(1.05);
+}
+
+/* ===== Message Text ===== */
+.newsletter-message {
+  max-width: 700px;
+  font-size: 16px;
+  color: #2d2d2d;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 15px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+/* ===== Responsive Styles ===== */
+@media screen and (max-width: 768px) {
+  .newsletter h1 {
+    font-size: 32px;
+  }
+
+  .newsletter p {
+    font-size: 16px;
+  }
+
+  .newsletter div {
+    flex-direction: column;
+    height: auto;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  .newsletter input {
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+
+  .newsletter div button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 65, 65, 0.3);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newsletter {
+    padding: 50px 10px; /* aur kam padding */
+    margin-bottom: 80px;
+  }
+
+  .newsletter h1 {
+    font-size: 26px;
+  }
+
+  .newsletter p {
+    font-size: 14px;
+  }
+
+  .newsletter div {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .newsletter input {
+    margin-bottom: 12px;
+    padding: 14px 18px;
+    border-radius: 15px;
+  }
+
+  .newsletter div button {
+    height: 50px;
+    border-radius: 15px;
+    box-shadow: 0 6px 14px rgba(255, 65, 65, 0.4);
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Prevent horizontal scroll at root ===== */
+body,
+html,
+#root {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

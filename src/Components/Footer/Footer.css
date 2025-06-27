@@ -1,0 +1,156 @@
+/* ========= Footer Container ========= */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 80px 20px 30px;
+  background-color: #f8f8f8;
+  color: #1a1a1a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ========= Logo Section ========= */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: auto;
+}
+
+.footer-logo p {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: 1px;
+}
+
+/* ========= Navigation Links ========= */
+.footer-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-links li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-links li:hover {
+  color: #ff5a5a;
+}
+
+/* ========= Social Icons ========= */
+.footer-social-icon {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-icon-container {
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.footer-icon-container:hover {
+  background: #f5f5f5;
+  transform: scale(1.05);
+}
+
+.footer-icon-container img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ========= Copyright ========= */
+.footer hr {
+  width: 80%;
+  border: none;
+  height: 2px;
+  background-color: #d0d0d0;
+  border-radius: 10px;
+}
+
+.footer p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* ========= Responsive Design ========= */
+@media screen and (max-width: 1024px) {
+  .footer-logo p {
+    font-size: 36px;
+  }
+
+  .footer-links {
+    gap: 30px;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    gap: 40px;
+    padding: 60px 20px 20px;
+  }
+
+  .footer-logo {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-logo p {
+    font-size: 30px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: 16px;
+  }
+
+  .footer-social-icon {
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    gap: 30px;
+    padding: 50px 10px 20px;
+  }
+
+  .footer-logo p {
+    font-size: 26px;
+  }
+
+  .footer-links {
+    font-size: 15px;
+    gap: 16px;
+  }
+
+  .footer-icon-container img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+}
