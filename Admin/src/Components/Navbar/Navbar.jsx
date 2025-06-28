@@ -5,21 +5,20 @@ import navProfile from '../../Assets/nav_profile.png';
 
 const Navbar = () => {
   return (
-    <div className='Navbar'>
+    <nav className='Navbar'>
       <div className="nav-left">
-        <img src={navlogo} alt="Logo" className="nav-logo" />
+        <img src={navlogo} alt="Shoppify Logo" className="nav-logo" />
         <div className="nav-title">
           <h1>Shoppify</h1>
           <p>Admin Panel</p>
         </div>
       </div>
 
-      {/* Profile with dropdown arrow */}
       <div className="nav-right">
-        <img src={navProfile} alt="Profile" className="nav-profile" />
+        <img src={navProfile} alt="Admin Profile" className="nav-profile" />
         <span className="dropdown-icon">▼</span>
       </div>
-    </div>
+    </nav>
   );
 };
 

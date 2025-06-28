@@ -14,7 +14,7 @@ import kid_banner from './Components/Assets/banner_kids.png';
 
 import ShopContextProvider from './Context/ShopContext';
 
-//  Protect route if not logged in
+// Reusable private route guard
 const PrivateRoute = ({ children }) => {
   const isLoggedIn = !!localStorage.getItem('auth-token');
   return isLoggedIn ? children : <Navigate to="/login" />;
@@ -27,20 +27,30 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path='/' element={<Shop />} />
-          <Route path='/mens' element={<ShopCategory banner={men_banner} category="men" />} />
-          <Route path='/womens' element={<ShopCategory banner={women_banner} category="women" />} />
-          <Route path='/kids' element={<ShopCategory banner={kid_banner} category="kid" />} />
+          <Route path="/" element={<Shop />} />
+          <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
+          <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
+          <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
 
-          <Route path='/product/:productId' element={<Product />} />
+          <Route path="/product/:productId" element={<Product />} />
 
-          <Route path='/cart' element={
-            <PrivateRoute>
-              <Cart />
-            </PrivateRoute>
-          } />
+          <Route
+            path="/cart"
+            element={
+              <PrivateRoute>
+                <Cart />
+              </PrivateRoute>
+            }
+          />
 
-          <Route path='/login' element={<LoginSignUp />} />
+          <Route
+            path="/login"
+            element={
+              localStorage.getItem("auth-token") ? <Navigate to="/" /> : <LoginSignUp />
+            }
+          />
+
+          <Route path="*" element={<h2 style={{ textAlign: "center", padding: "50px" }}>404 - Page Not Found</h2>} />
         </Routes>
 
         <Footer />
@@ -50,4 +60,5 @@ function App() {
 }
 
 export default App;
+
 

@@ -15,7 +15,8 @@ const ShopCategory = (props) => {
       try {
         const res = await axios.get("https://shoppify-backend-gofd.onrender.com/allproducts");
         const products = res.data.filter(
-          (item) => item.category.toLowerCase() === props.category.toLowerCase()
+          (item) =>
+            item.category?.trim().toLowerCase() === props.category?.trim().toLowerCase()
         );
         setFilteredProducts(products);
       } catch (err) {
@@ -46,11 +47,13 @@ const ShopCategory = (props) => {
         <div className="shopCategory-loading">Loading...</div>
       ) : error ? (
         <div className="shopCategory-error">{error}</div>
+      ) : filteredProducts.length === 0 ? (
+        <div className="shopCategory-empty">No products found in this category.</div>
       ) : (
         <div className="shopCategory-products">
-          {filteredProducts.map((item, i) => (
+          {filteredProducts.map((item) => (
             <Item
-              key={i}
+              key={item.id}
               id={item.id}
               name={item.name}
               image={item.image}
@@ -65,4 +68,3 @@ const ShopCategory = (props) => {
 };
 
 export default ShopCategory;
-
