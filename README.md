@@ -44,7 +44,7 @@ Shoppify/
 
 ### 🔧 Clone the Repository
 
-git clone https://github.com/riyatyag/Shoppify.git
+git clone https://github.com/riyatyag949/Shoppify.git
 
 cd Shoppify
 
